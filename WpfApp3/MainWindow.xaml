@@ -5,8 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1000" Width="500">
     <Grid>
+        <StackPanel Margin="30,15,30,0">
+            <TextBlock Text="Mozijegy Foglalás" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,30"></TextBlock>
 
+            <TextBlock FontWeight="Bold" Text="Név:" FontSize="24"></TextBlock>
+            <TextBox x:Name="inputName" Height="40" FontSize="18" Padding="5" Margin="0,5,0,20"></TextBox>
+
+            <TextBlock FontWeight="Bold" Text="Életkor:" FontSize="24"></TextBlock>
+            <TextBox x:Name="inputAge" Height="40" FontSize="18" Padding="5" Margin="0,5,0,20"></TextBox>
+
+            <TextBlock FontWeight="Bold" Text="Film kiválasztása:" FontSize="24"></TextBlock>
+            <ComboBox x:Name="filmValaszt" Height="40" FontSize="18" Margin="0,5,0,20">
+                <ComboBoxItem Content="Minecraft Movie"></ComboBoxItem>
+                <ComboBoxItem Content="Star Wars"></ComboBoxItem>
+                <ComboBoxItem Content="Avatar"></ComboBoxItem>
+                <ComboBoxItem Content="Jurassic World"></ComboBoxItem>
+            </ComboBox>
+
+            <TextBlock FontWeight="Bold" Text="Jegy Típusa:" FontSize="24"></TextBlock>
+            <RadioButton VerticalContentAlignment="Center" x:Name="normalRB" Content="Normál jegy - 2500Ft" GroupName="jegyTipus" Margin="5,5,5,0" FontSize="18"></RadioButton>
+            <RadioButton VerticalContentAlignment="Center"  x:Name="diakRB" Content="Diákjegy - 1900Ft" GroupName="jegyTipus" Margin="5,5,5,0" FontSize="18"></RadioButton>
+            <RadioButton VerticalContentAlignment="Center"  x:Name="vipRB" Content="VIP jegy - 4000Ft" GroupName="jegyTipus" Margin="5,5,5,20" FontSize="18"></RadioButton>
+
+
+            <TextBlock FontWeight="Bold" Text="Jegyek száma:" FontSize="24"></TextBlock>
+            <TextBox x:Name="inputTicketNumber" Height="40" FontSize="18" Padding="5" Margin="0,5,0,20"></TextBox>
+
+            <TextBlock FontWeight="Bold" Text="Extrák:" FontSize="24"></TextBlock>
+            <CheckBox VerticalContentAlignment="Center" x:Name="popcornCB" Content="Popcorn - 1200Ft" FontSize="24"></CheckBox>
+            <CheckBox VerticalContentAlignment="Center" x:Name="uditoCB" Content="Üdítő - 800Ft" FontSize="24"></CheckBox>
+            <CheckBox VerticalContentAlignment="Center" x:Name="szemuvegCB" Content="3D szemüveg - 500Ft" FontSize="24"></CheckBox>
+
+            <CheckBox VerticalContentAlignment="Center" x:Name="termsCB" Content="Elfogadom a vásárlási feltéleleket" FontSize="15" Margin="0,40,0,40"></CheckBox>
+
+            <Button Content="Foglalás" BorderThickness="0" Foreground="white" Background="DodgerBlue" FontWeight="Bold" FontSize="35" Height="60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Foglalas"></Button>
+            
+        </StackPanel>
     </Grid>
 </Window>
